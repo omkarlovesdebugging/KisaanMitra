@@ -1,12 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
-import { Sprout, Home, Truck, LogOut } from "lucide-react";
+import { Sprout, Home, Truck, LogOut, TrendingUp, Info } from "lucide-react";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
 
   const navItems = [
     { path: "/home", label: "Home", icon: Home },
+    { path: "/future-demand", label: "Forecast", icon: TrendingUp },
     { path: "/transport", label: "Transport", icon: Truck },
+    { path: "/about", label: "About", icon: Info },
   ];
 
   const isActive = (path: string) => location.pathname.startsWith(path);

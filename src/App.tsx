@@ -9,6 +9,8 @@ import Home from "./pages/Home";
 import CropDetail from "./pages/CropDetail";
 import RegionDetail from "./pages/RegionDetail";
 import Transport from "./pages/Transport";
+import FutureDemand from "./pages/FutureDemand";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/crop/:cropId" element={<CropDetail />} />
           <Route path="/crop/:cropId/region/:regionId" element={<RegionDetail />} />
           <Route path="/transport" element={<Transport />} />
+          <Route path="/future-demand" element={<FutureDemand />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
