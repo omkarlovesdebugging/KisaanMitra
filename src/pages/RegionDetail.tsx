@@ -3,19 +3,29 @@ import { ArrowLeft, MapPin, Truck } from "lucide-react";
 import Layout from "@/components/Layout";
 import VendorCard from "@/components/VendorCard";
 import { crops, regions, vendors, calculateTransportCost, indianStates } from "@/data/mockData";
-import { useState } from "react";
+import { getCurrentUser } from "@/services/authService";
+import { useState, useEffect } from "react";
 
 const RegionDetail = () => {
   const { cropId, regionId } = useParams();
   const navigate = useNavigate();
+  const currentUser = getCurrentUser();
 
   const crop = crops.find((c) => c.id === cropId);
   const region = regions.find((r) => r.id === regionId);
   const regionVendors = vendors.filter((v) => v.regionId === regionId);
 
-  const [fromState, setFromState] = useState("");
+  const [fromState, setFromState] = useState(currentUser?.state || "");
   const [weight, setWeight] = useState("1");
   const [transportResult, setTransportResult] = useState<{ distance: number; cost: number } | null>(null);
+
+  // Auto-calculate if user state is available
+  useEffect(() => {
+    if (currentUser?.state && region) {
+      const result = calculateTransportCost(currentUser.state, region.state, 1);
+      setTransportResult(result);
+    }
+  }, [currentUser, region]);
 
   if (!crop || !region) {
     return (

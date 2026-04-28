@@ -1,0 +1,335 @@
+[
+  {
+    "cropName": "Coffee",
+    "predictedDemand": 97.83,
+    "historicalAverage": 81.37,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 1
+  },
+  {
+    "cropName": "Coconut",
+    "predictedDemand": 88.9,
+    "historicalAverage": 80.88,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 2
+  },
+  {
+    "cropName": "Rice",
+    "predictedDemand": 85.17,
+    "historicalAverage": 74.36,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 3
+  },
+  {
+    "cropName": "Peanut",
+    "predictedDemand": 81.77,
+    "historicalAverage": 78.83,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 4
+  },
+  {
+    "cropName": "Rubber",
+    "predictedDemand": 80.26,
+    "historicalAverage": 73.92,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 5
+  },
+  {
+    "cropName": "Cotton",
+    "predictedDemand": 79.7,
+    "historicalAverage": 74.77,
+    "trend": "increasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 6
+  },
+  {
+    "cropName": "Maize",
+    "predictedDemand": 76.43,
+    "historicalAverage": 72.25,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 7
+  },
+  {
+    "cropName": "Potato",
+    "predictedDemand": 76.26,
+    "historicalAverage": 78.06,
+    "trend": "decreasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 8
+  },
+  {
+    "cropName": "Black_pepper",
+    "predictedDemand": 72.04,
+    "historicalAverage": 64.4,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 9
+  },
+  {
+    "cropName": "Moong",
+    "predictedDemand": 71.74,
+    "historicalAverage": 62.49,
+    "trend": "increasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 10
+  },
+  {
+    "cropName": "Beans",
+    "predictedDemand": 71.68,
+    "historicalAverage": 62.39,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 11
+  },
+  {
+    "cropName": "Turmeric",
+    "predictedDemand": 71.54,
+    "historicalAverage": 70.05,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 12
+  },
+  {
+    "cropName": "Chilli",
+    "predictedDemand": 70.75,
+    "historicalAverage": 70.37,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 13
+  },
+  {
+    "cropName": "Bajra",
+    "predictedDemand": 70.01,
+    "historicalAverage": 59.16,
+    "trend": "decreasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 14
+  },
+  {
+    "cropName": "Urad",
+    "predictedDemand": 67.4,
+    "historicalAverage": 62.07,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 15
+  },
+  {
+    "cropName": "Tea",
+    "predictedDemand": 65.94,
+    "historicalAverage": 67.05,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 16
+  },
+  {
+    "cropName": "Apple",
+    "predictedDemand": 65.32,
+    "historicalAverage": 54.11,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 17
+  },
+  {
+    "cropName": "Marigold",
+    "predictedDemand": 65.18,
+    "historicalAverage": 63.88,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 18
+  },
+  {
+    "cropName": "Ashwagandha",
+    "predictedDemand": 65.15,
+    "historicalAverage": 70.79,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 19
+  },
+  {
+    "cropName": "Wheat",
+    "predictedDemand": 61.22,
+    "historicalAverage": 66.26,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 20
+  },
+  {
+    "cropName": "Cardamom",
+    "predictedDemand": 58.16,
+    "historicalAverage": 66.93,
+    "trend": "decreasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 21
+  },
+  {
+    "cropName": "Chickpea",
+    "predictedDemand": 56.01,
+    "historicalAverage": 67.22,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 22
+  },
+  {
+    "cropName": "Lentil",
+    "predictedDemand": 55.4,
+    "historicalAverage": 64.72,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 23
+  },
+  {
+    "cropName": "Sorghum",
+    "predictedDemand": 55.32,
+    "historicalAverage": 65.86,
+    "trend": "decreasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 24
+  },
+  {
+    "cropName": "Soybean",
+    "predictedDemand": 54.86,
+    "historicalAverage": 60.02,
+    "trend": "increasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 25
+  },
+  {
+    "cropName": "Cabbage",
+    "predictedDemand": 49.87,
+    "historicalAverage": 64.0,
+    "trend": "decreasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 26
+  },
+  {
+    "cropName": "Banana",
+    "predictedDemand": 48.81,
+    "historicalAverage": 29.38,
+    "trend": "increasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 27
+  },
+  {
+    "cropName": "Aloe_vera",
+    "predictedDemand": 48.61,
+    "historicalAverage": 61.16,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 28
+  },
+  {
+    "cropName": "Onion",
+    "predictedDemand": 46.35,
+    "historicalAverage": 52.24,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 29
+  },
+  {
+    "cropName": "Sugarcane",
+    "predictedDemand": 46.27,
+    "historicalAverage": 59.13,
+    "trend": "decreasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 30
+  },
+  {
+    "cropName": "Matar",
+    "predictedDemand": 45.93,
+    "historicalAverage": 49.65,
+    "trend": "decreasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 31
+  },
+  {
+    "cropName": "Pigeon_pea",
+    "predictedDemand": 44.59,
+    "historicalAverage": 55.57,
+    "trend": "decreasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 32
+  },
+  {
+    "cropName": "Tomato",
+    "predictedDemand": 29.21,
+    "historicalAverage": 36.09,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 33
+  },
+  {
+    "cropName": "Mango",
+    "predictedDemand": 23.06,
+    "historicalAverage": 32.17,
+    "trend": "increasing",
+    "confidence": 94.91,
+    "dataPoints": 262,
+    "rank": 34
+  },
+  {
+    "cropName": "Tulsi",
+    "predictedDemand": 21.86,
+    "historicalAverage": 12.03,
+    "trend": "decreasing",
+    "confidence": 87.84,
+    "dataPoints": 262,
+    "rank": 35
+  },
+  {
+    "cropName": "Sunflower",
+    "predictedDemand": 21.7,
+    "historicalAverage": 19.68,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 36
+  },
+  {
+    "cropName": "Rose",
+    "predictedDemand": 16.89,
+    "historicalAverage": 19.49,
+    "trend": "decreasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 37
+  }
+]

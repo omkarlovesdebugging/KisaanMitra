@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Sprout, Eye, EyeOff } from "lucide-react";
 import loginBg from "@/assets/login-bg.jpg";
+import { toast } from "sonner";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -11,7 +12,32 @@ const Login = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate("/home");
+
+    // Validation
+    if (!phone || !password) {
+      toast.error("Please enter phone number and password");
+      return;
+    }
+
+    // Get users from localStorage
+    const users = JSON.parse(localStorage.getItem("agriconnect_users") || "[]");
+    const user = users.find((u: any) => u.phone === phone && u.password === password);
+
+    if (user) {
+      // Set current user
+      localStorage.setItem("agriconnect_current_user", JSON.stringify({
+        id: user.id,
+        name: user.name,
+        phone: user.phone,
+        state: user.state,
+        district: user.district,
+      }));
+      
+      toast.success(`Welcome back, ${user.name}!`);
+      navigate("/home");
+    } else {
+      toast.error("Invalid phone number or password");
+    }
   };
 
   return (
@@ -37,7 +63,7 @@ const Login = () => {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
               <Sprout className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="font-display text-2xl font-bold text-foreground">AgriConnect</span>
+            <span className="font-display text-2xl font-bold text-foreground">Kisaan Mitra</span>
           </div>
 
           <h2 className="font-display text-2xl font-bold text-foreground mb-1">Welcome back</h2>
@@ -85,7 +111,12 @@ const Login = () => {
 
           <p className="mt-6 text-center text-sm text-muted-foreground">
             New farmer?{" "}
-            <button className="font-medium text-primary hover:underline">Register here</button>
+            <button
+              onClick={() => navigate("/register")}
+              className="font-medium text-primary hover:underline"
+            >
+              Register here
+            </button>
           </p>
         </div>
       </div>

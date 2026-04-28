@@ -1,0 +1,92 @@
+[
+  {
+    "cropName": "Coffee",
+    "predictedDemand": 97.83,
+    "historicalAverage": 81.37,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 1
+  },
+  {
+    "cropName": "Coconut",
+    "predictedDemand": 88.9,
+    "historicalAverage": 80.88,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 2
+  },
+  {
+    "cropName": "Rice",
+    "predictedDemand": 85.17,
+    "historicalAverage": 74.36,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 3
+  },
+  {
+    "cropName": "Peanut",
+    "predictedDemand": 81.77,
+    "historicalAverage": 78.83,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 4
+  },
+  {
+    "cropName": "Rubber",
+    "predictedDemand": 80.26,
+    "historicalAverage": 73.92,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 5
+  },
+  {
+    "cropName": "Cotton",
+    "predictedDemand": 79.7,
+    "historicalAverage": 74.77,
+    "trend": "increasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 6
+  },
+  {
+    "cropName": "Maize",
+    "predictedDemand": 76.43,
+    "historicalAverage": 72.25,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 7
+  },
+  {
+    "cropName": "Potato",
+    "predictedDemand": 76.26,
+    "historicalAverage": 78.06,
+    "trend": "decreasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 8
+  },
+  {
+    "cropName": "Black_pepper",
+    "predictedDemand": 72.04,
+    "historicalAverage": 64.4,
+    "trend": "stable",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 9
+  },
+  {
+    "cropName": "Moong",
+    "predictedDemand": 71.74,
+    "historicalAverage": 62.49,
+    "trend": "increasing",
+    "confidence": 95,
+    "dataPoints": 262,
+    "rank": 10
+  }
+]

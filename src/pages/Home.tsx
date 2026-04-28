@@ -1,12 +1,22 @@
 import { useNavigate } from "react-router-dom";
 import { Sprout, Search, ChevronRight } from "lucide-react";
 import Layout from "@/components/Layout";
-import { crops } from "@/data/mockData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getCrops, type CropInfo } from "@/services/cropDataService";
 
 const Home = () => {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
+  const [crops, setCrops] = useState<CropInfo[]>([]);
+
+  useEffect(() => {
+    const loadCrops = async () => {
+      const data = await getCrops();
+      setCrops(data);
+    };
+
+    loadCrops();
+  }, []);
 
   const filtered = crops.filter((c) =>
     c.name.toLowerCase().includes(search.toLowerCase())
@@ -29,6 +39,11 @@ const Home = () => {
           <p className="text-muted-foreground max-w-lg">
             Select the crop you have cultivated. We'll show you the best markets to sell it for maximum profit.
           </p>
+          {crops.length > 0 && (
+            <p className="text-sm text-primary mt-2">
+              {crops.length} crops available
+            </p>
+          )}
         </div>
 
         {/* Search */}
@@ -52,13 +67,19 @@ const Home = () => {
               className="card-agri animate-fade-up group"
               style={{ animationDelay: `${i * 50}ms` }}
             >
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={crop.image}
-                  alt={crop.name}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+              {crop.image ? (
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={crop.image}
+                    alt={crop.name}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              ) : (
+                <div className="aspect-square overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                  <Sprout className="h-12 w-12 text-primary/40" />
+                </div>
+              )}
               <div className="p-3 flex items-center justify-between">
                 <span className="font-display font-bold text-foreground text-sm">
                   {crop.name}

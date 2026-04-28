@@ -1,8 +1,12 @@
-import { Link, useLocation } from "react-router-dom";
-import { Sprout, Home, Truck, LogOut, TrendingUp, Info } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Sprout, Home, Truck, LogOut, TrendingUp, Info, User } from "lucide-react";
+import { getCurrentUser, logoutUser } from "@/services/authService";
+import { toast } from "sonner";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const currentUser = getCurrentUser();
 
   const navItems = [
     { path: "/home", label: "Home", icon: Home },
@@ -13,6 +17,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const isActive = (path: string) => location.pathname.startsWith(path);
 
+  const handleLogout = () => {
+    logoutUser();
+    toast.success("Logged out successfully");
+    navigate("/");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Top Nav */}
@@ -22,7 +32,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
               <Sprout className="h-5 w-5 text-primary-foreground" />
             </div>
-            <span className="font-display text-xl font-bold text-foreground">AgriConnect</span>
+            <span className="font-display text-xl font-bold text-foreground">Kisaan Mitra</span>
           </Link>
 
           <nav className="flex items-center gap-1">
@@ -40,13 +50,21 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <span className="hidden sm:inline">{item.label}</span>
               </Link>
             ))}
-            <Link
-              to="/"
+            
+            {currentUser && (
+              <div className="ml-2 flex items-center gap-2 px-3 py-2 text-sm">
+                <User className="h-4 w-4 text-primary" />
+                <span className="hidden md:inline text-foreground font-medium">{currentUser.name}</span>
+              </div>
+            )}
+            
+            <button
+              onClick={handleLogout}
               className="ml-2 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
             >
               <LogOut className="h-4 w-4" />
               <span className="hidden sm:inline">Logout</span>
-            </Link>
+            </button>
           </nav>
         </div>
       </header>

@@ -9,6 +9,9 @@ import soybeanImg from "@/assets/crops/soybean.jpg";
 import chiliImg from "@/assets/crops/chili.jpg";
 import maizeImg from "@/assets/crops/maize.jpg";
 
+// Placeholder for crops without specific images
+const placeholderImg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect fill='%2393c5a8' width='400' height='400'/%3E%3Ctext fill='white' font-family='Arial' font-size='48' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E🌾%3C/text%3E%3C/svg%3E";
+
 export interface Crop {
   id: string;
   name: string;
@@ -41,81 +44,114 @@ export interface Vendor {
 }
 
 export const crops: Crop[] = [
+  // Crops with images
   { id: "tomato", name: "Tomato", image: tomatoImg, demandScore: 95, trendPercent: 18, topRegion: "Maharashtra", season: "Rabi" },
   { id: "rice", name: "Rice", image: riceImg, demandScore: 92, trendPercent: 12, topRegion: "West Bengal", season: "Kharif" },
   { id: "wheat", name: "Wheat", image: wheatImg, demandScore: 90, trendPercent: 8, topRegion: "Punjab", season: "Rabi" },
-  { id: "onion", name: "Onion", image: onionImg, demandScore: 88, trendPercent: 22, topRegion: "Nashik", season: "Rabi" },
+  { id: "onion", name: "Onion", image: onionImg, demandScore: 88, trendPercent: 22, topRegion: "Maharashtra", season: "Rabi" },
   { id: "potato", name: "Potato", image: potatoImg, demandScore: 85, trendPercent: 10, topRegion: "Uttar Pradesh", season: "Rabi" },
   { id: "cotton", name: "Cotton", image: cottonImg, demandScore: 82, trendPercent: 15, topRegion: "Gujarat", season: "Kharif" },
   { id: "sugarcane", name: "Sugarcane", image: sugarcaneImg, demandScore: 80, trendPercent: 6, topRegion: "Karnataka", season: "Annual" },
   { id: "soybean", name: "Soybean", image: soybeanImg, demandScore: 78, trendPercent: 14, topRegion: "Madhya Pradesh", season: "Kharif" },
-  { id: "chili", name: "Chili", image: chiliImg, demandScore: 76, trendPercent: 20, topRegion: "Andhra Pradesh", season: "Kharif" },
+  { id: "chilli", name: "Chilli", image: chiliImg, demandScore: 76, trendPercent: 20, topRegion: "Andhra Pradesh", season: "Kharif" },
   { id: "maize", name: "Maize", image: maizeImg, demandScore: 74, trendPercent: 9, topRegion: "Bihar", season: "Kharif" },
+  
+  // Additional crops with placeholder images
+  { id: "aloe_vera", name: "Aloe_vera", image: placeholderImg, demandScore: 72, trendPercent: 11, topRegion: "Rajasthan", season: "Annual" },
+  { id: "apple", name: "Apple", image: placeholderImg, demandScore: 84, trendPercent: 16, topRegion: "Himachal Pradesh", season: "Rabi" },
+  { id: "ashwagandha", name: "Ashwagandha", image: placeholderImg, demandScore: 68, trendPercent: 25, topRegion: "Madhya Pradesh", season: "Rabi" },
+  { id: "bajra", name: "Bajra", image: placeholderImg, demandScore: 71, trendPercent: 7, topRegion: "Rajasthan", season: "Kharif" },
+  { id: "banana", name: "Banana", image: placeholderImg, demandScore: 86, trendPercent: 13, topRegion: "Tamil Nadu", season: "Annual" },
+  { id: "beans", name: "Beans", image: placeholderImg, demandScore: 73, trendPercent: 9, topRegion: "Karnataka", season: "Rabi" },
+  { id: "black_pepper", name: "Black_pepper", image: placeholderImg, demandScore: 79, trendPercent: 19, topRegion: "Kerala", season: "Annual" },
+  { id: "cabbage", name: "Cabbage", image: placeholderImg, demandScore: 70, trendPercent: 8, topRegion: "Maharashtra", season: "Rabi" },
+  { id: "cardamom", name: "Cardamom", image: placeholderImg, demandScore: 81, trendPercent: 22, topRegion: "Kerala", season: "Annual" },
+  { id: "chickpea", name: "Chickpea", image: placeholderImg, demandScore: 77, trendPercent: 10, topRegion: "Madhya Pradesh", season: "Rabi" },
+  { id: "coconut", name: "Coconut", image: placeholderImg, demandScore: 89, trendPercent: 14, topRegion: "Kerala", season: "Annual" },
+  { id: "coffee", name: "Coffee", image: placeholderImg, demandScore: 91, trendPercent: 17, topRegion: "Karnataka", season: "Annual" },
+  { id: "lentil", name: "Lentil", image: placeholderImg, demandScore: 75, trendPercent: 11, topRegion: "Uttar Pradesh", season: "Rabi" },
+  { id: "mango", name: "Mango", image: placeholderImg, demandScore: 87, trendPercent: 15, topRegion: "Uttar Pradesh", season: "Summer" },
+  { id: "marigold", name: "Marigold", image: placeholderImg, demandScore: 66, trendPercent: 12, topRegion: "Karnataka", season: "Rabi" },
+  { id: "matar", name: "Matar", image: placeholderImg, demandScore: 74, trendPercent: 9, topRegion: "Uttar Pradesh", season: "Rabi" },
+  { id: "moong", name: "Moong", image: placeholderImg, demandScore: 76, trendPercent: 13, topRegion: "Rajasthan", season: "Kharif" },
+  { id: "peanut", name: "Peanut", image: placeholderImg, demandScore: 83, trendPercent: 16, topRegion: "Gujarat", season: "Kharif" },
+  { id: "pigeon_pea", name: "Pigeon_pea", image: placeholderImg, demandScore: 72, trendPercent: 10, topRegion: "Maharashtra", season: "Kharif" },
+  { id: "rose", name: "Rose", image: placeholderImg, demandScore: 69, trendPercent: 14, topRegion: "Karnataka", season: "Annual" },
+  { id: "rubber", name: "Rubber", image: placeholderImg, demandScore: 80, trendPercent: 11, topRegion: "Kerala", season: "Annual" },
+  { id: "sorghum", name: "Sorghum", image: placeholderImg, demandScore: 73, trendPercent: 8, topRegion: "Maharashtra", season: "Kharif" },
+  { id: "sunflower", name: "Sunflower", image: placeholderImg, demandScore: 77, trendPercent: 12, topRegion: "Karnataka", season: "Rabi" },
+  { id: "tea", name: "Tea", image: placeholderImg, demandScore: 85, trendPercent: 9, topRegion: "Assam", season: "Annual" },
+  { id: "tulsi", name: "Tulsi", image: placeholderImg, demandScore: 67, trendPercent: 18, topRegion: "Uttar Pradesh", season: "Annual" },
+  { id: "turmeric", name: "Turmeric", image: placeholderImg, demandScore: 78, trendPercent: 16, topRegion: "Telangana", season: "Kharif" },
+  { id: "urad", name: "Urad", image: placeholderImg, demandScore: 74, trendPercent: 11, topRegion: "Madhya Pradesh", season: "Kharif" },
 ];
 
-export const regions: Region[] = [
-  // Tomato regions
-  { id: "mh-tom", cropId: "tomato", name: "Nashik Mandi", state: "Maharashtra", avgPrice: "₹25/kg", demandScore: 95, buyerType: "Export Market" },
-  { id: "ka-tom", cropId: "tomato", name: "Bangalore Market", state: "Karnataka", avgPrice: "₹30/kg", demandScore: 90, buyerType: "Food Processing" },
-  { id: "ap-tom", cropId: "tomato", name: "Kurnool Market", state: "Andhra Pradesh", avgPrice: "₹22/kg", demandScore: 88, buyerType: "Mandi" },
-  { id: "tn-tom", cropId: "tomato", name: "Madurai Mandi", state: "Tamil Nadu", avgPrice: "₹28/kg", demandScore: 85, buyerType: "Retail" },
-  { id: "gj-tom", cropId: "tomato", name: "Ahmedabad APMC", state: "Gujarat", avgPrice: "₹20/kg", demandScore: 82, buyerType: "Mandi" },
-  { id: "rj-tom", cropId: "tomato", name: "Jaipur Market", state: "Rajasthan", avgPrice: "₹24/kg", demandScore: 80, buyerType: "Food Processing" },
-  { id: "mp-tom", cropId: "tomato", name: "Indore Mandi", state: "Madhya Pradesh", avgPrice: "₹21/kg", demandScore: 78, buyerType: "Mandi" },
-  { id: "wb-tom", cropId: "tomato", name: "Kolkata Market", state: "West Bengal", avgPrice: "₹26/kg", demandScore: 75, buyerType: "Retail" },
-  { id: "dl-tom", cropId: "tomato", name: "Azadpur Mandi", state: "Delhi", avgPrice: "₹32/kg", demandScore: 92, buyerType: "Retail" },
-  { id: "up-tom", cropId: "tomato", name: "Lucknow Market", state: "Uttar Pradesh", avgPrice: "₹23/kg", demandScore: 77, buyerType: "Mandi" },
-  // Rice regions
-  { id: "wb-rice", cropId: "rice", name: "Kolkata Rice Market", state: "West Bengal", avgPrice: "₹35/kg", demandScore: 92, buyerType: "Export Market" },
-  { id: "pn-rice", cropId: "rice", name: "Amritsar Mandi", state: "Punjab", avgPrice: "₹32/kg", demandScore: 90, buyerType: "Food Processing" },
-  { id: "ap-rice", cropId: "rice", name: "Guntur Market", state: "Andhra Pradesh", avgPrice: "₹30/kg", demandScore: 87, buyerType: "Export Market" },
-  { id: "tn-rice", cropId: "rice", name: "Thanjavur Market", state: "Tamil Nadu", avgPrice: "₹33/kg", demandScore: 85, buyerType: "Mandi" },
-  { id: "hr-rice", cropId: "rice", name: "Karnal Rice Hub", state: "Haryana", avgPrice: "₹31/kg", demandScore: 83, buyerType: "Food Processing" },
-  { id: "up-rice", cropId: "rice", name: "Varanasi Mandi", state: "Uttar Pradesh", avgPrice: "₹28/kg", demandScore: 80, buyerType: "Retail" },
-  { id: "bh-rice", cropId: "rice", name: "Patna Market", state: "Bihar", avgPrice: "₹27/kg", demandScore: 78, buyerType: "Mandi" },
-  { id: "od-rice", cropId: "rice", name: "Cuttack Market", state: "Odisha", avgPrice: "₹26/kg", demandScore: 76, buyerType: "Mandi" },
-  { id: "ka-rice", cropId: "rice", name: "Mandya Rice Hub", state: "Karnataka", avgPrice: "₹34/kg", demandScore: 82, buyerType: "Export Market" },
-  { id: "as-rice", cropId: "rice", name: "Guwahati Market", state: "Assam", avgPrice: "₹29/kg", demandScore: 74, buyerType: "Retail" },
-  // Generic fallback regions for other crops
-  { id: "gen-1", cropId: "wheat", name: "Ludhiana Mandi", state: "Punjab", avgPrice: "₹28/kg", demandScore: 90, buyerType: "Export Market" },
-  { id: "gen-2", cropId: "wheat", name: "Indore Market", state: "Madhya Pradesh", avgPrice: "₹26/kg", demandScore: 87, buyerType: "Food Processing" },
-  { id: "gen-3", cropId: "wheat", name: "Hapur Mandi", state: "Uttar Pradesh", avgPrice: "₹25/kg", demandScore: 84, buyerType: "Mandi" },
-  { id: "gen-4", cropId: "wheat", name: "Jaipur Grain Market", state: "Rajasthan", avgPrice: "₹27/kg", demandScore: 82, buyerType: "Retail" },
-  { id: "gen-5", cropId: "wheat", name: "Hisar Mandi", state: "Haryana", avgPrice: "₹24/kg", demandScore: 80, buyerType: "Food Processing" },
-  { id: "gen-6", cropId: "onion", name: "Lasalgaon Mandi", state: "Maharashtra", avgPrice: "₹18/kg", demandScore: 95, buyerType: "Export Market" },
-  { id: "gen-7", cropId: "onion", name: "Azadpur Mandi", state: "Delhi", avgPrice: "₹22/kg", demandScore: 90, buyerType: "Retail" },
-  { id: "gen-8", cropId: "onion", name: "Rajkot Market", state: "Gujarat", avgPrice: "₹16/kg", demandScore: 85, buyerType: "Mandi" },
-  { id: "gen-9", cropId: "potato", name: "Agra Mandi", state: "Uttar Pradesh", avgPrice: "₹15/kg", demandScore: 88, buyerType: "Mandi" },
-  { id: "gen-10", cropId: "potato", name: "Hooghly Market", state: "West Bengal", avgPrice: "₹14/kg", demandScore: 85, buyerType: "Retail" },
-  { id: "gen-11", cropId: "cotton", name: "Rajkot Cotton Market", state: "Gujarat", avgPrice: "₹55/kg", demandScore: 90, buyerType: "Export Market" },
-  { id: "gen-12", cropId: "cotton", name: "Nagpur Market", state: "Maharashtra", avgPrice: "₹52/kg", demandScore: 86, buyerType: "Food Processing" },
-  { id: "gen-13", cropId: "sugarcane", name: "Belgaum Market", state: "Karnataka", avgPrice: "₹3.5/kg", demandScore: 88, buyerType: "Food Processing" },
-  { id: "gen-14", cropId: "sugarcane", name: "Meerut Mandi", state: "Uttar Pradesh", avgPrice: "₹3.2/kg", demandScore: 85, buyerType: "Food Processing" },
-  { id: "gen-15", cropId: "soybean", name: "Ujjain Market", state: "Madhya Pradesh", avgPrice: "₹45/kg", demandScore: 86, buyerType: "Export Market" },
-  { id: "gen-16", cropId: "soybean", name: "Latur Market", state: "Maharashtra", avgPrice: "₹42/kg", demandScore: 83, buyerType: "Mandi" },
-  { id: "gen-17", cropId: "chili", name: "Guntur Chili Market", state: "Andhra Pradesh", avgPrice: "₹120/kg", demandScore: 92, buyerType: "Export Market" },
-  { id: "gen-18", cropId: "chili", name: "Khammam Market", state: "Telangana", avgPrice: "₹110/kg", demandScore: 88, buyerType: "Food Processing" },
-  { id: "gen-19", cropId: "maize", name: "Patna Mandi", state: "Bihar", avgPrice: "₹18/kg", demandScore: 84, buyerType: "Food Processing" },
-  { id: "gen-20", cropId: "maize", name: "Davangere Market", state: "Karnataka", avgPrice: "₹20/kg", demandScore: 80, buyerType: "Mandi" },
-];
+// Generate regions for all crops (random 5-12 markets per crop)
+function generateRegions(): Region[] {
+  const regions: Region[] = [];
+  const states = ["Maharashtra", "Karnataka", "Tamil Nadu", "Gujarat", "Punjab", "Haryana", "Uttar Pradesh", "West Bengal", "Bihar", "Rajasthan", "Madhya Pradesh", "Andhra Pradesh", "Telangana", "Kerala", "Odisha", "Assam", "Delhi"];
+  const buyerTypes = ["Export Market", "Food Processing", "Mandi", "Retail"];
+  
+  crops.forEach((crop, cropIndex) => {
+    // Random number of markets between 5 and 12
+    const marketCount = Math.floor(Math.random() * 8) + 5; // 5 to 12
+    
+    for (let i = 0; i < marketCount; i++) {
+      const state = states[i % states.length];
+      const buyerType = buyerTypes[i % buyerTypes.length];
+      const basePrice = 15 + (cropIndex * 5) + (i * 2);
+      const demandScore = 95 - (i * 2);
+      
+      regions.push({
+        id: `${crop.id}-${i}`,
+        cropId: crop.id,
+        name: `${state} ${crop.name} Market`,
+        state: state,
+        avgPrice: `₹${basePrice}/kg`,
+        demandScore: demandScore,
+        buyerType: buyerType
+      });
+    }
+  });
+  
+  return regions;
+}
 
-export const vendors: Vendor[] = [
-  { id: "v1", regionId: "mh-tom", name: "Rajesh Agro Traders", businessType: "Wholesaler", contact: "+91 98765 43210", rating: 4.5, verified: true, location: "Nashik, Maharashtra" },
-  { id: "v2", regionId: "mh-tom", name: "Fresh Farm Exports", businessType: "Exporter", contact: "+91 87654 32109", rating: 4.8, verified: true, location: "Nashik, Maharashtra" },
-  { id: "v3", regionId: "mh-tom", name: "Kisan Direct Supply", businessType: "Wholesaler", contact: "+91 76543 21098", rating: 4.2, verified: false, location: "Nashik, Maharashtra" },
-  { id: "v4", regionId: "ka-tom", name: "South Agro Hub", businessType: "Food Processor", contact: "+91 65432 10987", rating: 4.6, verified: true, location: "Bangalore, Karnataka" },
-  { id: "v5", regionId: "ka-tom", name: "Green Valley Traders", businessType: "Wholesaler", contact: "+91 54321 09876", rating: 4.3, verified: true, location: "Bangalore, Karnataka" },
-  { id: "v6", regionId: "dl-tom", name: "Delhi Fresh Market", businessType: "Retailer", contact: "+91 99887 76655", rating: 4.7, verified: true, location: "Azadpur, Delhi" },
-  { id: "v7", regionId: "dl-tom", name: "Capital Veg Traders", businessType: "Wholesaler", contact: "+91 88776 65544", rating: 4.1, verified: true, location: "Azadpur, Delhi" },
-  { id: "v8", regionId: "wb-rice", name: "Bengal Rice Mill", businessType: "Food Processor", contact: "+91 77665 54433", rating: 4.9, verified: true, location: "Kolkata, West Bengal" },
-  { id: "v9", regionId: "wb-rice", name: "Eastern Agro Exports", businessType: "Exporter", contact: "+91 66554 43322", rating: 4.4, verified: true, location: "Kolkata, West Bengal" },
-  { id: "v10", regionId: "pn-rice", name: "Punjab Rice Traders", businessType: "Wholesaler", contact: "+91 55443 32211", rating: 4.6, verified: true, location: "Amritsar, Punjab" },
-  { id: "v11", regionId: "gen-1", name: "Wheat King Traders", businessType: "Wholesaler", contact: "+91 44332 21100", rating: 4.3, verified: true, location: "Ludhiana, Punjab" },
-  { id: "v12", regionId: "gen-6", name: "Onion Export House", businessType: "Exporter", contact: "+91 33221 10099", rating: 4.7, verified: true, location: "Lasalgaon, Maharashtra" },
-  { id: "v13", regionId: "gen-9", name: "Agra Potato Hub", businessType: "Wholesaler", contact: "+91 22110 09988", rating: 4.2, verified: false, location: "Agra, Uttar Pradesh" },
-  { id: "v14", regionId: "gen-11", name: "Gujarat Cotton Corp", businessType: "Exporter", contact: "+91 11009 98877", rating: 4.8, verified: true, location: "Rajkot, Gujarat" },
-  { id: "v15", regionId: "gen-17", name: "Guntur Spice Traders", businessType: "Wholesaler", contact: "+91 99001 12233", rating: 4.5, verified: true, location: "Guntur, Andhra Pradesh" },
-];
+export const regions: Region[] = generateRegions();
+
+// Generate vendors for all regions (3 vendors per region)
+function generateVendors(): Vendor[] {
+  const vendors: Vendor[] = [];
+  const businessTypes = ["Wholesaler", "Exporter", "Food Processor", "Retailer"];
+  const vendorNames = [
+    "Agro Traders", "Farm Exports", "Kisan Supply", "Fresh Market", "Green Valley",
+    "Organic Hub", "Direct Supply", "Premium Traders", "Quality Exports", "Harvest Hub"
+  ];
+  
+  regions.forEach((region, regionIndex) => {
+    for (let i = 0; i < 3; i++) {
+      const vendorName = vendorNames[i % vendorNames.length];
+      const businessType = businessTypes[i % businessTypes.length];
+      const rating = 4.0 + (Math.random() * 1.0);
+      const verified = i < 2; // First 2 vendors are verified
+      
+      vendors.push({
+        id: `v-${region.id}-${i}`,
+        regionId: region.id,
+        name: `${region.state} ${vendorName}`,
+        businessType: businessType,
+        contact: `+91 ${90000 + regionIndex}${10000 + i}`,
+        rating: Math.round(rating * 10) / 10,
+        verified: verified,
+        location: `${region.name}, ${region.state}`
+      });
+    }
+  });
+  
+  return vendors;
+}
+
+export const vendors: Vendor[] = generateVendors();
 
 export const indianStates = [
   "Andhra Pradesh", "Assam", "Bihar", "Delhi", "Gujarat", "Haryana",
@@ -126,32 +162,144 @@ export const indianStates = [
 export const transportRates = {
   perKmPerTon: 3.5,
   baseCharge: 500,
+  // Comprehensive distance matrix between Indian states (in km)
   distances: {
+    // Maharashtra connections
     "Maharashtra-Delhi": 1400,
-    "Maharashtra-Karnataka": 650,
+    "Maharashtra-Karnataka": 850,
     "Maharashtra-Gujarat": 520,
     "Maharashtra-Tamil Nadu": 1200,
     "Maharashtra-Uttar Pradesh": 1300,
-    "Punjab-Delhi": 300,
-    "Punjab-Uttar Pradesh": 600,
-    "Punjab-Maharashtra": 1500,
-    "West Bengal-Delhi": 1500,
-    "West Bengal-Bihar": 550,
+    "Maharashtra-Punjab": 1650,
+    "Maharashtra-Haryana": 1450,
+    "Maharashtra-West Bengal": 1900,
+    "Maharashtra-Bihar": 1700,
+    "Maharashtra-Rajasthan": 1100,
+    "Maharashtra-Madhya Pradesh": 650,
+    "Maharashtra-Andhra Pradesh": 750,
+    "Maharashtra-Telangana": 650,
+    "Maharashtra-Kerala": 1100,
+    "Maharashtra-Odisha": 1600,
+    "Maharashtra-Assam": 2400,
+    
+    // Karnataka connections
     "Karnataka-Tamil Nadu": 350,
     "Karnataka-Kerala": 600,
+    "Karnataka-Andhra Pradesh": 450,
+    "Karnataka-Telangana": 550,
+    "Karnataka-Delhi": 2100,
+    "Karnataka-Gujarat": 1200,
+    "Karnataka-Madhya Pradesh": 1100,
+    "Karnataka-Rajasthan": 1500,
+    "Karnataka-Uttar Pradesh": 1900,
+    "Karnataka-West Bengal": 2200,
+    "Karnataka-Punjab": 2400,
+    
+    // Delhi connections
+    "Delhi-Punjab": 450,
+    "Delhi-Haryana": 150,
+    "Delhi-Uttar Pradesh": 550,
+    "Delhi-Rajasthan": 550,
+    "Delhi-Madhya Pradesh": 780,
+    "Delhi-Gujarat": 950,
+    "Delhi-West Bengal": 1500,
+    "Delhi-Bihar": 1100,
+    "Delhi-Assam": 1900,
+    "Delhi-Odisha": 1700,
+    
+    // Punjab connections
+    "Punjab-Haryana": 300,
+    "Punjab-Uttar Pradesh": 600,
+    "Punjab-Rajasthan": 650,
+    "Punjab-Madhya Pradesh": 1100,
+    "Punjab-Gujarat": 1200,
+    
+    // West Bengal connections
+    "West Bengal-Bihar": 550,
+    "West Bengal-Odisha": 450,
+    "West Bengal-Assam": 800,
+    "West Bengal-Uttar Pradesh": 1000,
+    
+    // Gujarat connections
     "Gujarat-Rajasthan": 500,
-    "Gujarat-Delhi": 950,
+    "Gujarat-Madhya Pradesh": 600,
+    
+    // Andhra Pradesh connections
     "Andhra Pradesh-Tamil Nadu": 450,
-    "Andhra Pradesh-Karnataka": 500,
-    "Madhya Pradesh-Delhi": 780,
-    "Bihar-Uttar Pradesh": 500,
+    "Andhra Pradesh-Telangana": 200,
+    "Andhra Pradesh-Odisha": 800,
+    
+    // Tamil Nadu connections
+    "Tamil Nadu-Kerala": 350,
+    "Tamil Nadu-Telangana": 650,
+    
+    // Uttar Pradesh connections
+    "Uttar Pradesh-Bihar": 500,
+    "Uttar Pradesh-Madhya Pradesh": 600,
+    "Uttar Pradesh-Haryana": 500,
+    
+    // Madhya Pradesh connections
+    "Madhya Pradesh-Rajasthan": 550,
+    "Madhya Pradesh-Telangana": 750,
+    
+    // Telangana connections
+    "Telangana-Odisha": 900,
   } as Record<string, number>,
 };
 
 export function getDistance(from: string, to: string): number {
+  // Return 0 if same state
+  if (from === to) return 0;
+  
   const key1 = `${from}-${to}`;
   const key2 = `${to}-${from}`;
-  return transportRates.distances[key1] || transportRates.distances[key2] || Math.floor(Math.random() * 1000 + 400);
+  
+  // Check if we have the exact distance
+  const exactDistance = transportRates.distances[key1] || transportRates.distances[key2];
+  if (exactDistance) return exactDistance;
+  
+  // For states not in our matrix, calculate approximate distance based on geographical zones
+  const zones: Record<string, string[]> = {
+    north: ["Delhi", "Punjab", "Haryana", "Uttar Pradesh", "Himachal Pradesh"],
+    west: ["Gujarat", "Rajasthan", "Maharashtra"],
+    south: ["Karnataka", "Tamil Nadu", "Kerala", "Andhra Pradesh", "Telangana"],
+    east: ["West Bengal", "Bihar", "Odisha", "Assam"],
+    central: ["Madhya Pradesh"]
+  };
+  
+  const getZone = (state: string): string => {
+    for (const [zone, states] of Object.entries(zones)) {
+      if (states.includes(state)) return zone;
+    }
+    return "unknown";
+  };
+  
+  const fromZone = getZone(from);
+  const toZone = getZone(to);
+  
+  // Approximate distances between zones
+  const zoneDistances: Record<string, number> = {
+    "north-north": 400,
+    "north-west": 800,
+    "north-south": 2000,
+    "north-east": 1500,
+    "north-central": 700,
+    "west-west": 600,
+    "west-south": 1200,
+    "west-east": 1800,
+    "west-central": 600,
+    "south-south": 500,
+    "south-east": 1800,
+    "south-central": 900,
+    "east-east": 600,
+    "east-central": 1000,
+    "central-central": 400,
+  };
+  
+  const zoneKey1 = `${fromZone}-${toZone}`;
+  const zoneKey2 = `${toZone}-${fromZone}`;
+  
+  return zoneDistances[zoneKey1] || zoneDistances[zoneKey2] || 1200;
 }
 
 export function calculateTransportCost(from: string, to: string, weightTons: number): { distance: number; cost: number } {
@@ -159,3 +307,4 @@ export function calculateTransportCost(from: string, to: string, weightTons: num
   const cost = transportRates.baseCharge + (distance * transportRates.perKmPerTon * weightTons);
   return { distance, cost };
 }
+

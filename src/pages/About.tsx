@@ -41,10 +41,10 @@ const About = () => {
             </div>
           </div>
           <h1 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            About AgriConnect
+            About Kisaan Mitra
           </h1>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            AgriConnect is a marketplace tool built for Indian farmers. Our goal is simple:{" "}
+            Kisaan Mitra is a marketplace tool built for Indian farmers. Our goal is simple:{" "}
             <strong className="text-foreground">help you earn more from every harvest</strong> by
             connecting you to the best markets, buyers, and demand insights — all in one place.
           </p>
@@ -97,7 +97,7 @@ const About = () => {
         <div className="card-agri p-8 text-center max-w-2xl mx-auto">
           <h2 className="font-display text-2xl font-bold text-foreground mb-3">Our Mission</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Every farmer deserves fair prices and easy access to markets. AgriConnect uses demand
+            Every farmer deserves fair prices and easy access to markets. Kisaan Mitra uses demand
             data and market insights to empower farmers with the information they need — so they
             can sell smarter, earn more, and plan their next crop with confidence.
           </p>
