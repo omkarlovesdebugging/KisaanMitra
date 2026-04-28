@@ -107,7 +107,7 @@ const Register = () => {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
               <Sprout className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="font-display text-2xl font-bold text-foreground">AgriConnect</span>
+            <span className="font-display text-2xl font-bold text-foreground">Kisaan Mitra</span>
           </div>
 
           <h2 className="font-display text-2xl font-bold text-foreground mb-1">Create Account</h2>
